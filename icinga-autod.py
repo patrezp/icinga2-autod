@@ -203,7 +203,7 @@ def check_args(args):
     for k,v in vars(args).iteritems():
         if k == 'network':
 	    network = v.split('/')[0]
-	    if len(network) > 7:
+	    if len(network) >= 7:
 	    	if is_valid_ipv4_address(network) is False:
 		    check_flags['is_valid_ipv4_address'] = False
 	    else:	
